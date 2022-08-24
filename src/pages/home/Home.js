@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-
-import { Link } from 'react-router-dom';
-
 export default class Home extends Component {
     componentDidMount() {
         document.title = 'surviv.fun | Home';
@@ -9,11 +6,11 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div className="Home">
-                Home
-                <Link to="/about">Über uns</Link>
-                <Link to="/contact">Kontakt</Link>
-            </div>
+            <>
+                <div className="Home">
+                    <h2>Hier entsteht eine neue Website</h2>
+                </div>
+            </>
         );
     }
 }
