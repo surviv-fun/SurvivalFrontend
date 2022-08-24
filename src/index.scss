@@ -1,4 +1,18 @@
 @import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+@font-face {
+    font-family: Comfortaa;
+    src: url('./fonts/comfortaa/Comfortaa-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'RedHatDisplay', sans-serif;
+}
+
+@import './sass/scroller';
 
 html,
 body {
@@ -18,4 +32,16 @@ body {
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.text-select {
+    user-select: text;
+}
+
+.auto-select {
+    user-select: auto;
 }

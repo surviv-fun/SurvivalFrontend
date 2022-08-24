@@ -23,6 +23,9 @@ import Home from './pages/home/Home';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
 import { Routes, Route } from 'react-router-dom';
 
 import './App.scss';
@@ -31,6 +34,7 @@ export default class App extends React.Component {
     render() {
         return (
             <>
+                <Header />
                 <div className="App">
                     <Routes>
                         <Route path="/" element={<Home />} />
@@ -38,6 +42,7 @@ export default class App extends React.Component {
                         <Route path="contact/" element={<Contact />} />
                     </Routes>
                 </div>
+                <Footer />
             </>
         );
     }
