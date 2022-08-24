@@ -19,13 +19,25 @@
 
 import React from 'react';
 
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
+
+import { Routes, Route } from 'react-router-dom';
+
 import './App.scss';
 
 export default class App extends React.Component {
     render() {
         return (
             <>
-                <div className="App"></div>
+                <div className="App">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="about/" element={<About />} />
+                        <Route path="contact/" element={<Contact />} />
+                    </Routes>
+                </div>
             </>
         );
     }
