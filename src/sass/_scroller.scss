@@ -17,20 +17,22 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-::-webkit-scrollbar {
-    width: 10px;
-}
+* {
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
 
-::-webkit-scrollbar-thumb {
-    background: #444;
-    width: 9px;
-    border-radius: 5px;
-}
+    &::-webkit-scrollbar-thumb {
+        background: #444;
+        width: 9px;
+        border-radius: 5px;
+    }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 
-::-webkit-scrollbar-track {
-    background: #222;
+    &::-webkit-scrollbar-track {
+        background: #222;
+    }
 }
