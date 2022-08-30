@@ -28,6 +28,10 @@ import Footer from './components/Footer/Footer';
 
 import { Routes, Route } from 'react-router-dom';
 
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.min.css';
+
 import './App.scss';
 
 export default class App extends React.Component {
@@ -36,13 +40,14 @@ export default class App extends React.Component {
             <>
                 <Header />
                 <div className="App">
-                    <Routes>
+                    <Routes base="/app/">
                         <Route path="/" element={<Home />} />
                         <Route path="about/" element={<About />} />
                         <Route path="contact/" element={<Contact />} />
                     </Routes>
                 </div>
                 <Footer />
+                <ToastContainer position="bottom-right" theme="dark" limit={5} autoClose={10000} hideProgressBar={false} newestOnTop closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
             </>
         );
     }

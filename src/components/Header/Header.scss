@@ -18,6 +18,7 @@
  */
 
 .Header {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -25,13 +26,20 @@
 
     border-bottom: 2px solid white;
 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../../images/header.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+
     .inline {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        width: 100vw;
 
-        margin-top: 60px;
+        margin-bottom: 30px;
+        margin-top: 30px;
 
         min-height: 50vh;
         .logo {
@@ -44,6 +52,16 @@
 
             img {
                 width: 250px;
+
+                border-radius: 50%;
+
+                background: rgba(101, 58, 242, 0.1);
+                box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+                backdrop-filter: blur(4px);
+                -webkit-backdrop-filter: blur(4px);
+                border: 1px solid rgba(255, 255, 255, 0.18);
+
+                filter: drop-shadow(7px 7px 5px #000);
             }
         }
 
@@ -54,6 +72,19 @@
             align-items: center;
 
             width: 60vw;
+
+            padding: 15px;
+
+            background: rgba(101, 58, 242, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
+            color: white;
+
+            text-shadow: 1px 1px 0px #000000, 2px 2px 0px #0f022162, 3px 3px 10px #0f022162;
         }
     }
 }

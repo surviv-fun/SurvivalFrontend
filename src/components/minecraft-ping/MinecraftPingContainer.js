@@ -63,7 +63,7 @@ export default function MinecraftPingContainer() {
 
         if (pingData?.players?.sample != null) {
             for (let player of pingData?.players?.sample || []) {
-                players.push(player.name + '\n');
+                players.push(player.name);
             }
         }
 
@@ -80,7 +80,7 @@ export default function MinecraftPingContainer() {
         if (pingData?.elements?.motd_html != null) motdDiv.innerHTML = pingData.elements.motd_html;
 
         titleDiv.innerHTML = titleSerializer.html();
-        titleDiv.dataset.hover = players.join('\n');
+        titleDiv.dataset.hover = players.join(', ');
     }, [pingData, motdId, titleId, imageId]);
 
     return (

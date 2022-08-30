@@ -23,7 +23,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 import './NavigationMenu.scss';
 
-export default function NavigationMenu() {
+export default function NavigationMenu(props) {
     const location = useLocation();
     const [path, setPath] = React.useState(location.pathname);
 
@@ -33,21 +33,23 @@ export default function NavigationMenu() {
 
     return (
         <nav className="NavigationMenu">
-            <div className="brand"></div>
-            <ul className="nav-items">
-                <li className="nav-item">
+            <div className="brand">
+                <div>{props.children}</div>
+            </div>
+            <ul className="nav-items" key={React.useId()}>
+                <li className="nav-item" key={React.useId()}>
                     <Link to={path === '/' ? '#' : '/'} className={path === '/' ? 'nav-link active' : 'nav-link '}>
                         Startseite
                     </Link>
                 </li>
 
-                <li className="nav-item">
+                <li className="nav-item" key={React.useId()}>
                     <Link to={path === '/contact' ? '#' : '/contact'} className={path === '/contact' ? 'nav-link active' : 'nav-link '}>
                         Contact
                     </Link>
                 </li>
 
-                <li className="nav-item">
+                <li className="nav-item" key={React.useId()}>
                     <Link to={path === '/about' ? '#' : '/about'} className={path === '/about' ? 'nav-link active' : 'nav-link '}>
                         Über Uns
                     </Link>
